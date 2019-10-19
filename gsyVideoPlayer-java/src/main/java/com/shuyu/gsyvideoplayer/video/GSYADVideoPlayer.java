@@ -97,7 +97,7 @@ public class GSYADVideoPlayer extends StandardGSYVideoPlayer {
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.start||v.getId()==R.id.time_out) {
+        if (v.getId() == R.id.start) {
             if (mCurrentState == CURRENT_STATE_ERROR) {
                 clickStartIcon();
             }
