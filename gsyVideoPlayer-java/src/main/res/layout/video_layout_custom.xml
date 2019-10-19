@@ -35,6 +35,19 @@
         android:orientation="horizontal"
         android:visibility="invisible">
 
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp">
+            <ImageView
+                android:id="@+id/time_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:layout_centerInParent="true"
+                android:src="@drawable/video_click_play_selector" />
+
+        </RelativeLayout>
 
 
         <TextView

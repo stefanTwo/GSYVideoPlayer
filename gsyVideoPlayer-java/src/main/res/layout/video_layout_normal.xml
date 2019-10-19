@@ -55,7 +55,6 @@
             android:id="@+id/current"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:text="00:00"
             android:textSize="@dimen/tv"
             android:textColor="@color/style_color" />

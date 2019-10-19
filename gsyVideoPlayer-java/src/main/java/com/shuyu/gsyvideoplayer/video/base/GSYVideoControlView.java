@@ -202,8 +202,8 @@ public abstract class GSYVideoControlView extends GSYVideoView implements View.O
     protected void init(Context context) {
         super.init(context);
 
-        mStartButton = findViewById(R.id.start);
-        mStartImgView = findViewById(R.id.time_out);
+        mStartButton =(ImageView) findViewById(R.id.start);
+        mStartImgView =(ImageView) findViewById(R.id.time_out);
         mTitleTextView = (TextView) findViewById(R.id.title);
         mBackButton = (ImageView) findViewById(R.id.back);
         mFullscreenButton = (ImageView) findViewById(R.id.fullscreen);
