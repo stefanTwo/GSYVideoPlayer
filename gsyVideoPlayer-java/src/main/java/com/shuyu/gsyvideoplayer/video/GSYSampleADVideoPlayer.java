@@ -159,6 +159,19 @@ public class GSYSampleADVideoPlayer extends ListGSYVideoPlayer {
                 }
             }
         }
+        if (mStartImgView!=null){
+            if (mStartImgView instanceof ImageView) {
+                ImageView imageView = (ImageView) mStartImgView;
+                if (mCurrentState == CURRENT_STATE_PLAYING) {
+                    imageView.setImageResource(R.drawable.bottom_video_click_pause_selector);
+                } else if (mCurrentState == CURRENT_STATE_ERROR) {
+                    imageView.setImageResource(R.drawable.bottom_video_click_play_selector);
+                } else {
+                    imageView.setImageResource(R.drawable.bottom_video_click_play_selector);
+                }
+            }
+
+        }
     }
 
     /**

@@ -773,13 +773,13 @@ public class StandardGSYVideoPlayer extends GSYVideoPlayer {
             ImageView imageView1 = (ImageView) mStartImgView;
             if (mCurrentState == CURRENT_STATE_PLAYING) {
                 imageView.setImageResource(R.drawable.video_click_pause_selector);
-                imageView1.setImageResource(R.drawable.video_click_pause_selector);
+                imageView1.setImageResource(R.drawable.bottom_video_click_pause_selector);
             } else if (mCurrentState == CURRENT_STATE_ERROR) {
                 imageView.setImageResource(R.drawable.video_click_error_selector);
                 imageView1.setImageResource(R.drawable.video_click_error_selector);
             } else {
                 imageView.setImageResource(R.drawable.video_click_play_selector);
-                imageView1.setImageResource(R.drawable.video_click_play_selector);
+                imageView1.setImageResource(R.drawable.bottom_video_click_play_selector);
             }
         }
 

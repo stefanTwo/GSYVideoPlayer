@@ -46,11 +46,11 @@ public class NormalGSYVideoPlayer extends StandardGSYVideoPlayer {
         if(mStartButton instanceof ImageView) {
             ImageView imageView = (ImageView) mStartButton;
             if (mCurrentState == CURRENT_STATE_PLAYING) {
-                imageView.setImageResource(R.drawable.video_click_pause_selector);
+                imageView.setImageResource(R.drawable.bottom_video_click_pause_selector);
             } else if (mCurrentState == CURRENT_STATE_ERROR) {
-                imageView.setImageResource(R.drawable.video_click_play_selector);
+                imageView.setImageResource(R.drawable.bottom_video_click_play_selector);
             } else {
-                imageView.setImageResource(R.drawable.video_click_play_selector);
+                imageView.setImageResource(R.drawable.bottom_video_click_play_selector);
             }
         }
     }
