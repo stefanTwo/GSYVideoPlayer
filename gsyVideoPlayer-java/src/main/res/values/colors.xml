@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="style_color">#DDB272</color><!--主题色-->
+    <color name="bottom_container_bg">#DDB272</color><!--主题色-->
+
+</resources>
