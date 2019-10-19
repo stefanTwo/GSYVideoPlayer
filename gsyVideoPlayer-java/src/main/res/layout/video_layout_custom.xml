@@ -39,7 +39,7 @@
             android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp">
-            <ImageView
+            <moe.codeest.enviews.ENPlayView
                 android:id="@+id/time_out"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

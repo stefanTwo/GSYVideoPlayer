@@ -741,20 +741,32 @@ public class StandardGSYVideoPlayer extends GSYVideoPlayer {
      * 定义开始按键显示
      */
     protected void updateStartImage() {
+        if (mStartImgView instanceof ENPlayView
+        ){
+            ENPlayView enPlayView1 = (ENPlayView) mStartImgView;
+            enPlayView1.setDuration(500);
+            if (mCurrentState == CURRENT_STATE_PLAYING) {
+                enPlayView1.play();
+            }else if (mCurrentState == CURRENT_STATE_ERROR){
+                enPlayView1.pause();
+            }else {
+                enPlayView1.pause();
+            }
+        }
         if (mStartButton instanceof ENPlayView) {
             ENPlayView enPlayView = (ENPlayView) mStartButton;
-            ENPlayView enPlayView1 = (ENPlayView) mStartImgView;
+
             enPlayView.setDuration(500);
 
             if (mCurrentState == CURRENT_STATE_PLAYING) {
                 enPlayView.play();
-                enPlayView1.play();
+
             } else if (mCurrentState == CURRENT_STATE_ERROR) {
                 enPlayView.pause();
-                enPlayView1.pause();
+
             } else {
                 enPlayView.pause();
-                enPlayView1.pause();
+
             }
         } else if (mStartButton instanceof ImageView) {
             ImageView imageView = (ImageView) mStartButton;
