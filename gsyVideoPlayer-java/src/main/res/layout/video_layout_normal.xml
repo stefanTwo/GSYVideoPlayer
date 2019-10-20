@@ -39,9 +39,7 @@
     android:layout_height="wrap_content"
     android:layout_marginLeft="10dp">
 
-
-
-       <ImageView
+    <ImageView
         android:id="@+id/time_out"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

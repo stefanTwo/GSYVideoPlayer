@@ -626,6 +626,7 @@ public class GSYVideoOptionBuilder {
         gsyVideoPlayer.setReleaseWhenLossAudio(mReleaseWhenLossAudio);
         gsyVideoPlayer.setFullHideActionBar(mActionBar);
         gsyVideoPlayer.setFullHideStatusBar(mStatusBar);
+
         if (mEnlargeImageRes > 0) {
             gsyVideoPlayer.setEnlargeImageRes(mEnlargeImageRes);
         }

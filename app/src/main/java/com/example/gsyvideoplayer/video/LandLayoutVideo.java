@@ -80,9 +80,7 @@ public class LandLayoutVideo extends StandardGSYVideoPlayer {
     @Override
     protected void updateStartImage() {
         if (mIfCurrentIsFullscreen) {
-
-
-                if (mStartImgView instanceof ImageView) {
+            if (mStartImgView instanceof ImageView) {
                     ImageView imageView = (ImageView) mStartImgView;
                     if (mCurrentState == CURRENT_STATE_PLAYING) {
                         imageView.setImageResource(com.shuyu.gsyvideoplayer.R.drawable.bottom_video_click_pause_selector);
