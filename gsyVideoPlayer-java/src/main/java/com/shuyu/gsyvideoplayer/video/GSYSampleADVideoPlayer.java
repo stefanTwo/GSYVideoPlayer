@@ -53,13 +53,14 @@ public class GSYSampleADVideoPlayer extends ListGSYVideoPlayer {
     protected void init(Context context) {
         super.init(context);
         mJumpAd = findViewById(R.id.jump_ad);
-        mADTime = (TextView) findViewById(R.id.ad_time);
-        mWidgetContainer = (ViewGroup) findViewById(R.id.widget_container);
+        mADTime =  findViewById(R.id.ad_time);
+        mWidgetContainer =  findViewById(R.id.widget_container);
         if (mJumpAd != null) {
             mJumpAd.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     playNext();
+
                 }
             });
         }
@@ -269,10 +270,10 @@ public class GSYSampleADVideoPlayer extends ListGSYVideoPlayer {
         if (mWidgetContainer != null) {
             mWidgetContainer.setVisibility((isFirstPrepared && isAdModel) ? GONE : VISIBLE);
         }
-        if (mBottomContainer != null) {
-            int color = (isFirstPrepared && isAdModel) ? Color.TRANSPARENT : getContext().getResources().getColor(R.color.bottom_container_bg);
-            mBottomContainer.setBackgroundColor(color);
-        }
+//        if (mBottomContainer != null) {
+//            int color = (isFirstPrepared && isAdModel) ? Color.TRANSPARENT : getContext().getResources().getColor(R.color.bottom_container_bg);
+//         mBottomContainer.setBackgroundColor(color);
+//        }
         if (mCurrentTimeTextView != null) {
             mCurrentTimeTextView.setVisibility((isFirstPrepared && isAdModel) ? INVISIBLE : VISIBLE);
         }

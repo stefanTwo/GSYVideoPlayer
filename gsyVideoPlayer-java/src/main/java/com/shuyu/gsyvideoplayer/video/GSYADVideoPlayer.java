@@ -221,8 +221,8 @@ public class GSYADVideoPlayer extends StandardGSYVideoPlayer {
             mADTime.setVisibility((isFirstPrepared) ? VISIBLE : GONE);
         }
         if (mBottomContainer != null) {
-            int color = (isFirstPrepared) ? Color.TRANSPARENT : getContext().getResources().getColor(R.color.bottom_container_bg);
-            mBottomContainer.setBackgroundColor(color);
+//            int color = (isFirstPrepared) ? Color.TRANSPARENT : getContext().getResources().getColor(R.color.bottom_container_bg);
+//            mBottomContainer.setBackgroundColor(color);
         }
         if (mCurrentTimeTextView != null) {
             mCurrentTimeTextView.setVisibility((isFirstPrepared) ? INVISIBLE : VISIBLE);

@@ -9,7 +9,9 @@ import android.widget.RelativeLayout;
 
 import com.shuyu.gsyvideoplayer.GSYBaseActivityDetail;
 import com.shuyu.gsyvideoplayer.builder.GSYVideoOptionBuilder;
+import com.shuyu.gsyvideoplayer.cache.CacheFactory;
 import com.shuyu.gsyvideoplayer.listener.LockClickListener;
+import com.shuyu.gsyvideoplayer.player.PlayerFactory;
 import com.shuyu.gsyvideoplayer.video.GSYSampleADVideoPlayer;
 import com.shuyu.gsyvideoplayer.video.ListGSYVideoPlayer;
 import com.shuyu.gsyvideoplayer.video.base.GSYVideoPlayer;
@@ -18,6 +20,8 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import tv.danmaku.ijk.media.exo2.Exo2PlayerManager;
+import tv.danmaku.ijk.media.exo2.ExoPlayerCacheManager;
 
 
 public class DetailADPlayer extends GSYBaseActivityDetail<ListGSYVideoPlayer> {
@@ -29,7 +33,7 @@ public class DetailADPlayer extends GSYBaseActivityDetail<ListGSYVideoPlayer> {
     GSYSampleADVideoPlayer detailPlayer;
     @BindView(R.id.activity_detail_player)
     RelativeLayout activityDetailPlayer;
-
+    String url = "https://q65ms8.cdnlab.live/hls/9MWx0FNtvFCjKvDNdYxZ8g/1571578804/3000/3218/3218.m3u8";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,23 +42,23 @@ public class DetailADPlayer extends GSYBaseActivityDetail<ListGSYVideoPlayer> {
 
         //普通模式
         initVideo();
-
         ArrayList<GSYSampleADVideoPlayer.GSYADVideoModel> urls = new ArrayList<>();
         //广告1
         urls.add(new GSYSampleADVideoPlayer.GSYADVideoModel("http://7xjmzj.com1.z0.glb.clouddn.com/20171026175005_JObCxCE2.mp4",
-                "", GSYSampleADVideoPlayer.GSYADVideoModel.TYPE_AD));
+                "广告36251321", GSYSampleADVideoPlayer.GSYADVideoModel.TYPE_AD));
         //正式内容1
-        urls.add(new GSYSampleADVideoPlayer.GSYADVideoModel("http://9890.vod.myqcloud.com/9890_4e292f9a3dd011e6b4078980237cc3d3.f20.mp4",
+        urls.add(new GSYSampleADVideoPlayer.GSYADVideoModel(url,
                 "正文1标题", GSYSampleADVideoPlayer.GSYADVideoModel.TYPE_NORMAL));
-        //广告2
-        urls.add(new GSYSampleADVideoPlayer.GSYADVideoModel("http://7xjmzj.com1.z0.glb.clouddn.com/20171026175005_JObCxCE2.mp4",
-                "", GSYSampleADVideoPlayer.GSYADVideoModel.TYPE_AD, true));
-        //正式内容2
-        urls.add(new GSYSampleADVideoPlayer.GSYADVideoModel("http://9890.vod.myqcloud.com/9890_4e292f9a3dd011e6b4078980237cc3d3.f30.mp4",
-                "正文2标题", GSYSampleADVideoPlayer.GSYADVideoModel.TYPE_NORMAL));
+//        //广告2
+//        urls.add(new GSYSampleADVideoPlayer.GSYADVideoModel("http://7xjmzj.com1.z0.glb.clouddn.com/20171026175005_JObCxCE2.mp4",
+//                "", GSYSampleADVideoPlayer.GSYADVideoModel.TYPE_AD, true));
+//        //正式内容2
+//        urls.add(new GSYSampleADVideoPlayer.GSYADVideoModel("http://9890.vod.myqcloud.com/9890_4e292f9a3dd011e6b4078980237cc3d3.f30.mp4",
+//                "正文2标题", GSYSampleADVideoPlayer.GSYADVideoModel.TYPE_NORMAL));
 
         detailPlayer.setAdUp(urls, true, 0);
-
+        CacheFactory.setCacheManager(ExoPlayerCacheManager.class);
+        PlayerFactory.setPlayManager(Exo2PlayerManager.class);
         //增加封面
         ImageView imageView = new ImageView(this);
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
@@ -115,7 +119,7 @@ public class DetailADPlayer extends GSYBaseActivityDetail<ListGSYVideoPlayer> {
         super.onEnterFullscreen(url, objects);
         //隐藏调全屏对象的返回按键
         GSYVideoPlayer gsyVideoPlayer = (GSYVideoPlayer) objects[1];
-        gsyVideoPlayer.getBackButton().setVisibility(View.GONE);
+      //  gsyVideoPlayer.getBackButton().setVisibility(View.);
     }
 
 

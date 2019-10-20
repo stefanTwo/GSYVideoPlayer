@@ -6,11 +6,16 @@ import android.widget.ImageView;
 
 import com.shuyu.gsyvideoplayer.GSYBaseADActivityDetail;
 import com.shuyu.gsyvideoplayer.builder.GSYVideoOptionBuilder;
+import com.shuyu.gsyvideoplayer.cache.CacheFactory;
 import com.shuyu.gsyvideoplayer.listener.GSYVideoProgressListener;
 import com.shuyu.gsyvideoplayer.listener.LockClickListener;
+import com.shuyu.gsyvideoplayer.player.PlayerFactory;
 import com.shuyu.gsyvideoplayer.video.NormalGSYVideoPlayer;
 import com.shuyu.gsyvideoplayer.video.GSYADVideoPlayer;
 import com.shuyu.gsyvideoplayer.video.base.GSYVideoPlayer;
+
+import tv.danmaku.ijk.media.exo2.Exo2PlayerManager;
+import tv.danmaku.ijk.media.exo2.ExoPlayerCacheManager;
 
 /**
  * 带广告播放，支持中间插入广告模式
@@ -25,7 +30,7 @@ public class DetailADPlayer2 extends GSYBaseADActivityDetail<NormalGSYVideoPlaye
 
     private String urlAd2 = "http://7xjmzj.com1.z0.glb.clouddn.com/20171026175005_JObCxCE2.mp4";
 
-    private String url = "http://9890.vod.myqcloud.com/9890_4e292f9a3dd011e6b4078980237cc3d3.f20.mp4";
+    private String url = "https://q28mnb.cdnlab.live/hls/6qGeJ5nJnGj0t0xWL75NNA/1571568722/3000/3218/3218.m3u8";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +40,8 @@ public class DetailADPlayer2 extends GSYBaseADActivityDetail<NormalGSYVideoPlaye
         detailPlayer = (NormalGSYVideoPlayer) findViewById(R.id.detail_player);
         adPlayer = (GSYADVideoPlayer) findViewById(R.id.ad_player);
 
+        PlayerFactory.setPlayManager(Exo2PlayerManager.class);
+        CacheFactory.setCacheManager(ExoPlayerCacheManager.class);
         //普通模式
         resolveNormalVideoUI();
 
@@ -56,14 +63,14 @@ public class DetailADPlayer2 extends GSYBaseADActivityDetail<NormalGSYVideoPlaye
             private int preSecond = 0;
             @Override
             public void onProgress(int progress, int secProgress, int currentPosition, int duration) {
-                //在5秒的时候弹出中间广告
-                int currentSecond = currentPosition / 1000;
-                if (currentSecond == 5 && currentSecond != preSecond) {
-                    detailPlayer.getCurrentPlayer().onVideoPause();
-                    getGSYADVideoOptionBuilder().setUrl(urlAd2).build(adPlayer);
-                    startAdPlay();
-                }
-                preSecond = currentSecond;
+//                //在5秒的时候弹出中间广告
+//                int currentSecond = currentPosition / 1000;
+//                if (currentSecond == 5 && currentSecond != preSecond) {
+//                    detailPlayer.getCurrentPlayer().onVideoPause();
+//                    getGSYADVideoOptionBuilder().setUrl(urlAd2).build(adPlayer);
+//                    startAdPlay();
+//                }
+//                preSecond = currentSecond;
             }
         });
 

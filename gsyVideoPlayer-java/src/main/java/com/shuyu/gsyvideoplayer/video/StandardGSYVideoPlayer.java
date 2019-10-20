@@ -428,6 +428,7 @@ public class StandardGSYVideoPlayer extends GSYVideoPlayer {
     @Override
     protected void hideAllWidget() {
         setViewShowState(mBottomContainer, INVISIBLE);
+
         setViewShowState(mTopContainer, INVISIBLE);
         setViewShowState(mBottomProgressBar, VISIBLE);
         setViewShowState(mStartButton, INVISIBLE);

@@ -204,6 +204,7 @@ public class ListGSYVideoPlayer extends StandardGSYVideoPlayer {
     public boolean playNext() {
         if (mPlayPosition < (mUriList.size() - 1)) {
             mPlayPosition += 1;
+            mStartImgView.setVisibility(VISIBLE);
             GSYVideoModel gsyVideoModel = mUriList.get(mPlayPosition);
             mSaveChangeViewTIme = 0;
             setUp(mUriList, mCache, mPlayPosition, null, mMapHeadData, false);

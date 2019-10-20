@@ -20,6 +20,7 @@ import androidx.transition.TransitionManager;
 import com.shuyu.gsyvideoplayer.R;
 import com.shuyu.gsyvideoplayer.utils.CommonUtil;
 import com.shuyu.gsyvideoplayer.utils.Debuger;
+import com.shuyu.gsyvideoplayer.utils.GSYVideoType;
 import com.shuyu.gsyvideoplayer.utils.OrientationUtils;
 import com.shuyu.gsyvideoplayer.view.SmallVideoTouch;
 
@@ -315,7 +316,8 @@ public abstract class GSYBaseVideoPlayer extends GSYVideoControlView {
         mOrientationUtils.setEnable(isRotateViewAuto());
         mOrientationUtils.setRotateWithSystem(mRotateWithSystem);
         gsyVideoPlayer.mOrientationUtils = mOrientationUtils;
-
+         //设置全屏的方法
+        GSYVideoType.setShowType(GSYVideoType.SCREEN_TYPE_FULL);
         final boolean isVertical = isVerticalFullByVideoSize();
         final boolean isLockLand = isLockLandByAutoFullSize();
 
@@ -355,7 +357,6 @@ public abstract class GSYBaseVideoPlayer extends GSYVideoControlView {
      * 恢复
      */
     protected void resolveNormalVideoShow(View oldF, ViewGroup vp, GSYVideoPlayer gsyVideoPlayer) {
-
         if (oldF != null && oldF.getParent() != null) {
             ViewGroup viewGroup = (ViewGroup) oldF.getParent();
             vp.removeView(viewGroup);
@@ -796,7 +797,7 @@ public abstract class GSYBaseVideoPlayer extends GSYVideoControlView {
     @SuppressWarnings("ResourceType")
     public void hideSmallVideo() {
         final ViewGroup vp = getViewGroup();
-        GSYVideoPlayer gsyVideoPlayer = (GSYVideoPlayer) vp.findViewById(getSmallId());
+        GSYVideoPlayer gsyVideoPlayer =  vp.findViewById(getSmallId());
         removeVideo(vp, getSmallId());
         mCurrentState = getGSYVideoManager().getLastState();
         if (gsyVideoPlayer != null) {
