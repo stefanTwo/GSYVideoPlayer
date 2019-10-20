@@ -572,6 +572,7 @@ public abstract class GSYVideoControlView extends GSYVideoView implements View.O
             if (title != null && mTitleTextView != null) {
                 mTitleTextView.setText(title);
             }
+
             if (mIfCurrentIsFullscreen) {
                 if (mFullscreenButton != null)
                     mFullscreenButton.setImageResource(getShrinkImageRes());

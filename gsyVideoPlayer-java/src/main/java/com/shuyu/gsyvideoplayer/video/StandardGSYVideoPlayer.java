@@ -441,6 +441,7 @@ public class StandardGSYVideoPlayer extends GSYVideoPlayer {
         setViewShowState(mTopContainer, VISIBLE);
         setViewShowState(mBottomContainer, INVISIBLE);
         setViewShowState(mStartButton, VISIBLE);
+        setViewShowState(mStartImgView, VISIBLE);
         setViewShowState(mLoadingProgressBar, INVISIBLE);
         setViewShowState(mThumbImageViewLayout, VISIBLE);
         setViewShowState(mBottomProgressBar, INVISIBLE);
@@ -459,6 +460,7 @@ public class StandardGSYVideoPlayer extends GSYVideoPlayer {
         setViewShowState(mTopContainer, VISIBLE);
         setViewShowState(mBottomContainer, VISIBLE);
         setViewShowState(mStartButton, INVISIBLE);
+        setViewShowState(mStartImgView, INVISIBLE);
         setViewShowState(mLoadingProgressBar, VISIBLE);
         setViewShowState(mThumbImageViewLayout, INVISIBLE);
         setViewShowState(mBottomProgressBar, INVISIBLE);
@@ -479,6 +481,7 @@ public class StandardGSYVideoPlayer extends GSYVideoPlayer {
         setViewShowState(mTopContainer, VISIBLE);
         setViewShowState(mBottomContainer, VISIBLE);
         setViewShowState(mStartButton, VISIBLE);
+        setViewShowState(mStartImgView, VISIBLE);
         setViewShowState(mLoadingProgressBar, INVISIBLE);
         setViewShowState(mThumbImageViewLayout, INVISIBLE);
         setViewShowState(mBottomProgressBar, INVISIBLE);
@@ -497,6 +500,7 @@ public class StandardGSYVideoPlayer extends GSYVideoPlayer {
         setViewShowState(mTopContainer, VISIBLE);
         setViewShowState(mBottomContainer, VISIBLE);
         setViewShowState(mStartButton, VISIBLE);
+        setViewShowState(mStartImgView, INVISIBLE);
         setViewShowState(mLoadingProgressBar, INVISIBLE);
         setViewShowState(mThumbImageViewLayout, INVISIBLE);
         setViewShowState(mBottomProgressBar, INVISIBLE);
@@ -516,6 +520,7 @@ public class StandardGSYVideoPlayer extends GSYVideoPlayer {
         setViewShowState(mTopContainer, VISIBLE);
         setViewShowState(mBottomContainer, VISIBLE);
         setViewShowState(mStartButton, INVISIBLE);
+        setViewShowState(mStartImgView, INVISIBLE);
         setViewShowState(mLoadingProgressBar, VISIBLE);
         setViewShowState(mThumbImageViewLayout, INVISIBLE);
         setViewShowState(mBottomProgressBar, INVISIBLE);
@@ -536,6 +541,7 @@ public class StandardGSYVideoPlayer extends GSYVideoPlayer {
         setViewShowState(mTopContainer, VISIBLE);
         setViewShowState(mBottomContainer, VISIBLE);
         setViewShowState(mStartButton, VISIBLE);
+        setViewShowState(mStartImgView, VISIBLE);
         setViewShowState(mLoadingProgressBar, INVISIBLE);
         setViewShowState(mThumbImageViewLayout, VISIBLE);
         setViewShowState(mBottomProgressBar, INVISIBLE);
@@ -690,6 +696,7 @@ public class StandardGSYVideoPlayer extends GSYVideoPlayer {
         setViewShowState(mTopContainer, INVISIBLE);
         setViewShowState(mBottomContainer, INVISIBLE);
         setViewShowState(mStartButton, INVISIBLE);
+        setViewShowState(mStartImgView, INVISIBLE);
         setViewShowState(mLoadingProgressBar, VISIBLE);
         setViewShowState(mThumbImageViewLayout, INVISIBLE);
         setViewShowState(mBottomProgressBar, VISIBLE);
@@ -710,6 +717,7 @@ public class StandardGSYVideoPlayer extends GSYVideoPlayer {
         setViewShowState(mTopContainer, INVISIBLE);
         setViewShowState(mBottomContainer, INVISIBLE);
         setViewShowState(mStartButton, INVISIBLE);
+        setViewShowState(mStartImgView, INVISIBLE);
         setViewShowState(mLoadingProgressBar, INVISIBLE);
         setViewShowState(mThumbImageViewLayout, INVISIBLE);
         setViewShowState(mBottomProgressBar, INVISIBLE);
@@ -725,6 +733,7 @@ public class StandardGSYVideoPlayer extends GSYVideoPlayer {
 
         setViewShowState(mTopContainer, INVISIBLE);
         setViewShowState(mBottomContainer, INVISIBLE);
+        setViewShowState(mStartImgView, INVISIBLE);
         setViewShowState(mStartButton, VISIBLE);
         setViewShowState(mLoadingProgressBar, INVISIBLE);
         setViewShowState(mThumbImageViewLayout, VISIBLE);
