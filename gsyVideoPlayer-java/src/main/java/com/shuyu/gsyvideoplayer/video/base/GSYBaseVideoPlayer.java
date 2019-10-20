@@ -129,9 +129,7 @@ public abstract class GSYBaseVideoPlayer extends GSYVideoControlView {
         if (mCurrentTimeTextView != null) {
             mCurrentTimeTextView.setVisibility(INVISIBLE);
         }
-        if (mStartImgView!=null){
-            mStartImgView.setVisibility(INVISIBLE);
-        }
+
         if (mTextureViewContainer != null) {
             mTextureViewContainer.setOnClickListener(null);
         }

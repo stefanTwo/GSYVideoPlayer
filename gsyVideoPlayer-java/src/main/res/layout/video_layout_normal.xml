@@ -3,14 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/black">
-    <ImageView
 
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:scaleType="center"
-        android:layout_centerInParent="true"
-        android:layout_alignParentRight="true"
-        android:src="@drawable/bottom_video_click_play_selector" />
     <RelativeLayout
         android:id="@+id/surface_container"
         android:layout_width="match_parent"
@@ -40,6 +33,7 @@
         android:layout_height="40dp"
         android:layout_alignParentBottom="true"
         android:background="#99000000"
+        android:visibility="invisible"
         android:gravity="center_vertical"
         android:orientation="horizontal"
        >
@@ -53,6 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleType="center"
+
         android:layout_centerInParent="true"
         android:src="@drawable/bottom_video_click_play_selector" />
 
