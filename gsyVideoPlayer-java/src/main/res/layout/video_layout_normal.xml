@@ -3,7 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/black">
+    <ImageView
 
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="center"
+        android:layout_centerInParent="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/bottom_video_click_play_selector" />
     <RelativeLayout
         android:id="@+id/surface_container"
         android:layout_width="match_parent"
@@ -24,6 +31,8 @@
         android:layout_alignParentTop="true"
         android:background="#000000"
         android:scaleType="fitCenter" />
+
+
 
     <LinearLayout
         android:id="@+id/layout_bottom"
